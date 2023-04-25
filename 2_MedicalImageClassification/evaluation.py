@@ -7,7 +7,8 @@ from main import get_data_set
 import visualkeras
 from keras_visualizer import visualizer 
 
-HASH = 1682420650.9587703
+# HASH = 1682420650.9587703
+HASH = 1682430771.7856107
 
 def main():
     model = keras.models.load_model(f'model-{HASH}.h5')
@@ -35,13 +36,13 @@ def main():
     # plt.imshow(confusion_matrix, cmap='binary', interpolation='None')
     # plt.show()
 
-    # disp =  metrics.ConfusionMatrixDisplay(confusion_matrix=confusion_matrix)
-    # disp.plot(cmap="binary", values_format="d")
-    # plt.savefig(f'out/confusion_matrix-{HASH}.pdf') 
-    # plt.cla()
+    disp =  metrics.ConfusionMatrixDisplay(confusion_matrix=confusion_matrix)
+    disp.plot(cmap="binary", values_format="d")
+    plt.savefig(f'out/confusion_matrix-{HASH}.pdf') 
+    plt.cla()
 
     # plot_model(model, to_file=f'out/model-{HASH}.pdf', show_shapes=True)
 
-    # visualizer(model, file_format='png', view=True)
+    visualizer(model, file_format='pdf', view=True)
 if __name__ == '__main__':
     main()

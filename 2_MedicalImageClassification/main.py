@@ -56,6 +56,10 @@ def model(X, y):
     model.add(Dropout(0.2))
     model.add(Dense(64, activation='relu'))
     model.add(Dropout(0.2))
+    model.add(Dense(64, activation='relu'))
+    model.add(Dropout(0.2))
+    model.add(Dense(64, activation='relu'))
+    model.add(Dropout(0.2))
     model.add(Dense(2, activation='softmax'))
     opt = keras.optimizers.SGD(learning_rate=0.001, decay=1e-6)
     

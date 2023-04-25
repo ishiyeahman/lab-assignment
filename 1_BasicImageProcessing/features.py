@@ -14,6 +14,12 @@ def get_akaze_keypoints(img, gray):
     img = cv2.drawKeypoints(gray, kp, img)
     return img
 
+def get_hog_keypoints(img, gray):
+    hog = cv2.HOGDescriptor()
+    kp = hog.detect(img, None)
+    img = cv2.drawKeypoints(gray, kp, img)
+    return img
+
 def main():
     # read image
     label = 'Person2'
@@ -22,12 +28,14 @@ def main():
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     img_shift = get_sift_keypoints(img, gray)
-    cv2.imwrite(IMG_DIR + f'out/keypoints_shift_{label}.jpg', img_shift)
+    cv2.imwrite(IMG_DIR + f'out/keypoints_sift_{label}.jpg', img_shift)
 
 
     img_akaze = get_akaze_keypoints(img, gray)
     cv2.imwrite(IMG_DIR + f'out/keypoints_akaze_{label}.jpg', img_akaze)
 
+    img_hog = get_akaze_keypoints(img, gray)
+    cv2.imwrite(IMG_DIR + f'out/keypoints_hog_{label}.jpg', img_hog)
     
 
 if __name__ == '__main__':

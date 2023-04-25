@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 # ts-learning dynamic time warping
-from tslearn.metrics import dtw
+
 
 DEMENSION = 3
 

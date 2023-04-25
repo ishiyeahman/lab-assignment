@@ -55,7 +55,8 @@ def main():
             plt.plot(data, '--', color=colors[1], alpha=0.4)
     
     plt.legend()
-    plt.show()
+    plt.savefig('level1.pdf')
+    # plt.show()
 
 if  __name__ == '__main__':
     main()

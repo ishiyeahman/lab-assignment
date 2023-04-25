@@ -63,6 +63,7 @@ def main():
         else:
             ax.plot(data[0], data[1], data[2], '--', alpha=0.4, color = colors[1])
 
+    # plt.savefig('level1.pdf')
     plt.show()
 
 if  __name__ == '__main__':
