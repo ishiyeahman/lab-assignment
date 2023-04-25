@@ -6,19 +6,19 @@ def calc():
     b = np.array([1, 2, 3, 4])
     
     # addition
-    print(a + b)
+    print("addition:", a + b)
     
     # subtraction
-    print(a - b)
+    print("subtraction:", a - b)
     
     # multiplication
-    print(a * b)
-
+    print("multiplication:", a * b)
+    
     # division
-    print(a / b)
-
+    print("division:", a / b)
+    
     # dot product
-    print(a.dot(b))
-
+    print("dot product:", a.dot(b))
+    
 if __name__ == '__main__':
     calc()
