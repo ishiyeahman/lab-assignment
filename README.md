@@ -7,7 +7,7 @@
 4. [特徴量抽出](https://github.com/ishiyeahman/lab-assignment/tree/main/4_CharacterScience)
 
 3,4については，プログラムの実装のみ．
-レポートには，３の分類結果のみ示した．
+レポートには，1,2の実行結果および考察，３の分類結果のみ示した．
 
 ## etc
 - image reference
